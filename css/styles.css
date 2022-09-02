@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body{
+    background: #ffd2ff;
+    color: rgb(8, 8, 8);
+    font-family:serif;
+    text-align: center;
+}
+h3{
+    font-family: 'arial';
+    font-size: 25pt;
+    letter-spacing: 1px;
+    width: 85%;
+    margin: 5px auto;
+    background:#72ffc4;
+    padding: 5px;
+    color: rgb(3, 3, 3);
+    text-align: center;
+    text-transform: uppercase;
+}
+#container{
+    width: 400px;
+    height: 550;
+    margin: 200px auto; 
+    border: rgb(3, 3, 3) solid 5px;
+    border-radius: 10px;
+    background-color: rgb(251, 253, 255);
+
+}
+
+#container form label{
+margin-right:280px;
+font-size: 15pt;
+position: relative;
+}
+
+#container form img {
+    margin: 15px auto;
+    text-align: center;
+    display: block;
+}
+#container form input,select{
+    width: 85%;
+    padding: 5px;
+    font-size: 16pt;
+    display: block;
+    margin: 15px auto;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+#container form input[type="submit"]{
+background:#72ffc4;
+padding: 10px;
+color: rgb(3, 3, 3);
+letter-spacing: 1px;
+border: 0;
+cursor: pointer;
+
+}
+.alert{
+    font-family: 'Arial';
+    font-size: 16px;
+    text-align: center;
+
+}
+.boton{
+  margin-top: 5px;
+  display: inline-block;
+  width: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  border-radius: 10px;
+  border: black 2px solid;
+  padding: 5px 10px;
+  text-decoration: none;
+  color:black ;
+  background-color: #72ffc4;
+}
