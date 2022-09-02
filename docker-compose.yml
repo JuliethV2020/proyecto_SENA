@@ -33,7 +33,7 @@ services:
       - .env
     volumes:
       - data:/var/lib/mysql
-      - ./db/santaisabela.sql:/docker-entrypoint-initdb.d/mysql.sql
+      - ./bd/santaisabela.sql:/docker-entrypoint-initdb.d/mysql.sql
     networks:
       - net
 
