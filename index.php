@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(0);
+
 $alert='';
 session_start();
 if(!empty($_SESSION['active'])){

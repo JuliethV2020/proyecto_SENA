@@ -1,9 +1,9 @@
 
 <?php
-session_start();
+// session_start();
 if(empty($_SESSION['active'])){
     
-    header('location:../index.php');
+    // header('location:../index.php');
 }
 ?>
 

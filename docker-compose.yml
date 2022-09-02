@@ -1,0 +1,58 @@
+version: '3'
+
+services:
+
+  backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    #platform: linux/amd64
+    container_name: php
+    ports:
+      - "80:80"
+    restart: always
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    networks:
+      - net
+
+
+  db:
+    container_name: mysql
+    restart: unless-stopped
+    image: mysql:5.7
+    #platform: linux/amd64
+    command: mysqld --default-authentication-plugin=mysql_native_password
+    security_opt:
+      - seccomp:unconfined
+    expose:
+      - "3306:3306"
+    env_file:
+      - .env
+    volumes:
+      - data:/var/lib/mysql
+      - ./db/santaisabela.sql:/docker-entrypoint-initdb.d/mysql.sql
+    networks:
+      - net
+
+  phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      container_name: phpmyadmin
+      #platform: linux/amd64
+      env_file:
+        - .env
+      depends_on:
+        - db
+      restart: unless-stopped
+      ports:
+        - 8080:80
+      networks:
+        - net
+
+volumes:
+  data:
+networks:
+  net:
+

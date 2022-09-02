@@ -1,8 +1,8 @@
 <?php
 
-$host='localhost';
-$user='root';
-$clave='';
+$host='db';
+$user='sena';
+$clave='sena';
 $db='santaisabela';
 
 
